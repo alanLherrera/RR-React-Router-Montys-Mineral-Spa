@@ -1,7 +1,7 @@
 
 
 export default function Packages() {
-
+    const displayPackages = props.packages.map(eachPackage => <li>{eachPackage}</li>)
     return (
         <div>
             <div className="packages">

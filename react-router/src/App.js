@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 
 import './App.css';
 
@@ -12,24 +13,32 @@ function App() {
 
   return (
     <div className="App">
+      <Router>
       <header>
         <h1 className="title">Welcome to Monty's Mineral SPA</h1>
 
         <div className="navBar">
           <ul>
             <li>
-              <a href={<Home />}>Home</a>
+              <Link to='/'>Home</Link>
             </li>
             <li>
-              <a href={<About />}>About Us</a>
+              <link to='/about'>About Us</link>
             </li>
             <li>
-              <a href={<Packages packages={packages}/>}>Our Packages</a>
+              <link to='/packages'>Our Packages</link>
             </li>
           </ul>
         </div>
 
       </header>
+      <div classname="display">
+        <Routes>
+          <Route path="/" element={<Home />}
+        </Routes>
+
+      </div>
+      </Router>
     </div>
   );
 }
